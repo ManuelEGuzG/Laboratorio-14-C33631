@@ -1,0 +1,122 @@
+[
+  {
+    "titulo": "Thriller",
+    "artista": "Michael Jackson",
+    "genero": "Pop",
+    "anio": 1982,
+    "sello": "Epic",
+    "pistas": 9,
+    "imagen": "thriller.avif",
+    "slug": "thriller",
+    "resumen": "El album mas vendido de la historia.",
+    "descripcion": "Album de Michael Jackson que redefinio la musica pop de los anos 80. Contiene hits como Billie Jean, Beat It y la cancion titular Thriller."
+  },
+  {
+    "titulo": "Back in Black",
+    "artista": "AC/DC",
+    "genero": "Rock",
+    "anio": 1980,
+    "sello": "Atlantic",
+    "pistas": 10,
+    "imagen": "back-in-black.avif",
+    "slug": "back-in-black",
+    "resumen": "El album de rock mas vendido de todos los tiempos.",
+    "descripcion": "Grabado en homenaje al fallecido vocalista Bon Scott, con Brian Johnson como nuevo cantante. Contiene clasicos como Hells Bells y You Shook Me All Night Long."
+  },
+  {
+    "titulo": "The Dark Side of the Moon",
+    "artista": "Pink Floyd",
+    "genero": "Rock Progresivo",
+    "anio": 1973,
+    "sello": "Harvest",
+    "pistas": 10,
+    "imagen": "dark-side-of-the-moon.avif",
+    "slug": "dark-side-of-the-moon",
+    "resumen": "Una obra maestra del rock progresivo.",
+    "descripcion": "Album conceptual de Pink Floyd sobre temas como el tiempo, la codicia y la salud mental. Permanecio en las listas de Billboard durante mas de 900 semanas."
+  },
+  {
+    "titulo": "Abbey Road",
+    "artista": "The Beatles",
+    "genero": "Rock",
+    "anio": 1969,
+    "sello": "Apple",
+    "pistas": 17,
+    "imagen": "abbey-road.avif",
+    "slug": "abbey-road",
+    "resumen": "El ultimo album grabado por los Beatles.",
+    "descripcion": "Considerado uno de los mejores albumes de la historia de la musica. Incluye Come Together, Something y la famosa suite del lado B. La portada es una de las mas icónicas del rock."
+  },
+  {
+    "titulo": "Rumours",
+    "artista": "Fleetwood Mac",
+    "genero": "Pop Rock",
+    "anio": 1977,
+    "sello": "Warner Bros",
+    "pistas": 11,
+    "imagen": "rumours.avif",
+    "slug": "rumours",
+    "resumen": "Un clasico del pop rock grabado en medio del caos personal de la banda.",
+    "descripcion": "Grabado mientras las parejas dentro de la banda se separaban, Rumours explora temas de desamor y traicion. Go Your Own Way y The Chain son sus canciones mas conocidas."
+  },
+  {
+    "titulo": "Nevermind",
+    "artista": "Nirvana",
+    "genero": "Grunge",
+    "anio": 1991,
+    "sello": "DGC",
+    "pistas": 12,
+    "imagen": "nevermind.avif",
+    "slug": "nevermind",
+    "resumen": "El album que llevo el grunge al mainstream mundial.",
+    "descripcion": "Segundo album de Nirvana liderado por Kurt Cobain. Smells Like Teen Spirit revoluciono la musica de los 90 y puso a Seattle en el mapa musical mundial."
+  },
+  {
+    "titulo": "Kind of Blue",
+    "artista": "Miles Davis",
+    "genero": "Jazz",
+    "anio": 1959,
+    "sello": "Columbia",
+    "pistas": 5,
+    "imagen": "kind-of-blue.avif",
+    "slug": "kind-of-blue",
+    "resumen": "El album de jazz mas vendido de la historia.",
+    "descripcion": "Obra cumbre del jazz modal protagonizada por Miles Davis junto a John Coltrane y Bill Evans. So What es su tema mas emblematico y ha influenciado a generaciones de musicos."
+  },
+  {
+    "titulo": "Purple Rain",
+    "artista": "Prince",
+    "genero": "Pop",
+    "anio": 1984,
+    "sello": "Warner Bros",
+    "pistas": 9,
+    "imagen": "purple-rain.avif",
+    "slug": "purple-rain",
+    "resumen": "La banda sonora que catapulto a Prince a la fama mundial.",
+    "descripcion": "Album y pelicula simultaneos que consolidaron a Prince como superestrella. When Doves Cry fue el primer sencillo numero uno sin bajo en la historia del pop."
+  },
+  {
+    "titulo": "Hybrid Theory",
+    "artista": "Linkin Park",
+    "genero": "Nu Metal",
+    "anio": 2000,
+    "sello": "Warner Bros",
+    "pistas": 12,
+    "imagen": "hybrid-theory.avif",
+    "slug": "hybrid-theory",
+    "resumen": "El album debut mas vendido del siglo XXI.",
+    "descripcion": "Debut de Linkin Park que fusiono metal, hip hop y rock alternativo. In the End y Crawling son sus canciones mas reconocidas a nivel mundial."
+  },
+  {
+    "titulo": "21",
+    "artista": "Adele",
+    "genero": "Soul",
+    "anio": 2011,
+    "sello": "XL Recordings",
+    "pistas": 11,
+    "imagen": "21.avif",
+    "slug": "21",
+    "resumen": "El album mas vendido del siglo XXI por una artista femenina.",
+    "descripcion": "Segundo album de Adele inspirado en una ruptura amorosa. Rolling in the Deep y Someone Like You dominaron las listas mundiales durante meses y ganaron multiples Grammy."
+  }
+]
