@@ -8,6 +8,8 @@ API REST construida con Node.js y Express para administrar el catálogo de álbu
 - **Express** v5
 - **SQLite** (nativo de Node.js, módulo `node:sqlite`)
 - **Zod** (validación de datos)
+- **Vitest** (framework de pruebas)
+- **Supertest** (pruebas HTTP)
 - **pnpm** (gestor de paquetes)
 
 ## Requisitos previos
@@ -49,6 +51,20 @@ pnpm dev
 
 El servidor escucha en `http://localhost:4321`.
 
+## Correr las pruebas
+
+```bash
+pnpm test
+```
+
+Ejecuta la suite completa de 12 pruebas automatizadas con Vitest y Supertest.
+
+```bash
+pnpm test:watch
+```
+
+Modo watch: re-ejecuta los tests cada vez que guardás un archivo.
+
 ## Rutas disponibles
 
 | Método | Ruta | Descripción |
@@ -73,6 +89,23 @@ El servidor escucha en `http://localhost:4321`.
 | 400 | Bad Request — la validación de Zod falló |
 | 404 | Not Found — el recurso no existe |
 | 409 | Conflict — POST intenta crear un álbum con slug ya existente |
+
+## Suite de pruebas
+
+| Ruta | Caso | Esperado |
+|------|------|----------|
+| GET /albumes | Normal | 200 + arreglo con slug sembrado |
+| GET /album/:slug | Existente | 200 + objeto completo |
+| GET /album/:slug | Inexistente | 404 JSON |
+| GET /search/:text | Texto < 3 chars | 400 JSON |
+| GET /search/:text | Texto válido | 200 + arreglo |
+| POST /albumes | Cuerpo válido | 201 + Location + objeto |
+| POST /albumes | Cuerpo inválido | 400 JSON |
+| POST /albumes | Slug duplicado | 409 JSON |
+| PUT /album/:slug | Existente y válido | 200 + objeto actualizado |
+| PUT /album/:slug | Inexistente | 404 JSON |
+| DELETE /album/:slug | Existente | 204 sin cuerpo |
+| DELETE /album/:slug | Inexistente | 404 JSON |
 
 ## Ejemplos con xh
 
@@ -117,9 +150,12 @@ discostore-api/
 │       ├── create.js           # POST /albumes
 │       ├── update.js           # PUT /album/:slug
 │       └── remove.js           # DELETE /album/:slug
+├── tests/
+│   └── albumes.test.js     # Suite de pruebas (Vitest + Supertest)
 ├── .env                    # Variables de entorno (HOST, PORT)
 ├── .gitignore
-├── index.js                # Entrada principal de la API
+├── app.js                  # App Express sin el listen
+├── index.js                # Entrada principal (solo listen)
 ├── package.json
 ├── README.md
 └── REFERENCIAS.md
