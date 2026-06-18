@@ -1,60 +1,9 @@
-import express from "express";
 import { env, loadEnvFile } from "node:process";
-import { cwd } from "node:process";
-
-import { getAll } from "./routes/albumes/getAll.js";
-import { getBySlug } from "./routes/albumes/getBySlug.js";
-import { getByGenero } from "./routes/albumes/getByGenero.js";
-import { search } from "./routes/albumes/search.js";
-import { create } from "./routes/albumes/create.js";
-import { update } from "./routes/albumes/update.js";
-import { remove } from "./routes/albumes/remove.js";
+import app from "./app.js";
 
 loadEnvFile("./.env");
 
 const { HOST, PORT } = env;
-
-const app = express();
-app.enable("strict routing");
-app.use(express.json());
-
-// Ruta raiz: informacion de la API
-app.get("/", (req, res) => {
-  res.json({
-    nombre: "DiscoStore API",
-    version: "1.0.0",
-    descripcion: "API REST para administrar el catalogo de albumes de una tienda de musica",
-    rutas: {
-      "GET /albumes": "Lista de slugs de todos los albumes",
-      "GET /album/:slug": "Datos de un album por su slug",
-      "GET /genero/:genero": "Slugs de albumes de ese genero",
-      "GET /search/:text": "Busqueda por texto (minimo 3 caracteres)",
-      "POST /albumes": "Crear un nuevo album",
-      "PUT /album/:slug": "Actualizar un album existente",
-      "DELETE /album/:slug": "Eliminar un album",
-      "GET /imagenes/:file": "Imagenes de los albumes"
-    }
-  });
-});
-
-// Rutas de lectura
-app.get("/albumes", getAll);
-app.get("/album/:slug", getBySlug);
-app.get("/genero/:genero", getByGenero);
-app.get("/search/:text", search);
-
-// Rutas de escritura
-app.post("/albumes", create);
-app.put("/album/:slug", update);
-app.delete("/album/:slug", remove);
-
-// Archivos estaticos: imagenes
-app.use("/imagenes", express.static(`${cwd()}/public/imagenes`));
-
-// Catch-all: ruta no encontrada
-app.use((req, res) => {
-  res.status(404).json({ error: "Ruta no encontrada" });
-});
 
 app.listen(PORT, HOST, () => {
   console.log(`Servidor escuchando: http://${HOST}:${PORT}`);
