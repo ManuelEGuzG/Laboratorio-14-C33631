@@ -7,9 +7,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "createdb": "node data/createdb.js"
+    "createdb": "node data/createdb.js",
+    "test": "vitest run",
+"test:watch": "vitest"
   },
-  "keywords": ["api", "express", "sqlite", "musica", "albumes"],
+  "keywords": [
+    "api",
+    "express",
+    "sqlite",
+    "musica",
+    "albumes"
+  ],
   "author": "",
   "license": "ISC",
   "devEngines": {
@@ -25,6 +33,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
-    "sharp": "^0.35.1"
+    "sharp": "^0.35.1",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.9"
   }
 }
